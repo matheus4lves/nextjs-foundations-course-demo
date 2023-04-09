@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- Since this is an inline script, the defer attribute has no effect and we
+    have to put it right before the body closing tag. -->
+    <script>
+      const app = document.querySelector("#app");
+
+      const header = document.createElement("h1");
+
+      const headerContent = document.createTextNode("Develop. Preview. Ship. 🚀");
+
+      header.appendChild(headerContent);
+
+      app.appendChild(header);
+    </script>
+  </body>
+</html>
