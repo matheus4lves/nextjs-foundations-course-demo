@@ -6,7 +6,7 @@ const { merge } = require("webpack-merge");
 const commonConfig = merge([
   {
     context: path.resolve(__dirname, "./src"),
-    entry: ["./index.html"],
+    entry: ["./index.html", "./index.jsx"],
     output: {
       filename: "bundle.js",
       path: path.resolve(__dirname, "./dist"),
@@ -17,6 +17,7 @@ const commonConfig = merge([
   use the HtmlWepbackPlugin (since you want it to add script tags and etc for you) */
   parts.loadHtml(),
   parts.page({ title: "Next.js Demo", template: "./index.html" }),
+  parts.loadJavaScript(),
 ]);
 
 const configs = {

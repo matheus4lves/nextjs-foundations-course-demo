@@ -23,3 +23,17 @@ exports.devServer = () => ({
     port: 3000,
   },
 });
+
+exports.loadJavaScript = () => ({
+  module: {
+    rules: [
+      {
+        test: /\.m?(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
+    ],
+  },
+});

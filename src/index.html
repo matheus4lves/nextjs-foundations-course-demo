@@ -8,18 +8,5 @@
   </head>
   <body>
     <div id="app"></div>
-    <!-- Since this is an inline script, the defer attribute has no effect and we
-    have to put it right before the body closing tag. -->
-    <script>
-      const app = document.querySelector("#app");
-
-      const header = document.createElement("h1");
-
-      const headerContent = document.createTextNode("Develop. Preview. Ship. 🚀");
-
-      header.appendChild(headerContent);
-
-      app.appendChild(header);
-    </script>
   </body>
 </html>
