@@ -5,4 +5,4 @@ import App from "./Components/App.jsx";
 const app = document.querySelector("#app");
 const root = createRoot(app);
 
-root.render(<App />, root);
+root.render(<App />);
