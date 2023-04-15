@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Header.jsx";
+import Button from "./Button.jsx";
 
 const HomePage = () => {
+  const [likes, setLikes] = useState(0);
+
   const names = ["Ada Lovelace", "Grace Hopper", "Margaret Hamilton"];
+
+  function handleIncreaseLikes() {
+    setLikes(likes => likes + 1);
+  }
 
   return (
     <>
@@ -14,6 +21,7 @@ const HomePage = () => {
           <li key={idx}>{name}</li>
         ))}
       </ul>
+      <Button onClick={handleIncreaseLikes}>Like {likes}</Button>
     </>
   );
 };
